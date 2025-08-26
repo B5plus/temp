@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Join Our Team | PharmaCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .careers-page {
+            margin-top: 80px;
+        }
+        
+        .careers-hero {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .careers-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .careers-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .careers-content {
+            padding: 4rem 0;
+        }
+        
+        .careers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .careers-info h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+        
+        .careers-info p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .benefits-list i {
+            color: #10b981;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .application-form {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .application-form h3 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .submit-btn {
+            background: #2563eb;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .job-openings {
+            background: white;
+            padding: 4rem 0;
+        }
+        
+        .job-openings h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 3rem;
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .job-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .job-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-department {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .job-description {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-requirements {
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-requirements h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .job-requirements ul {
+            color: #64748b;
+            padding-left: 1.5rem;
+        }
+        
+        .job-requirements li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .apply-btn {
+            background: #10b981;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .apply-btn:hover {
+            background: #059669;
+        }
+        
+        @media (max-width: 768px) {
+            .careers-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .careers-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-pills"></i>
+                <span>PharmaCorp</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="safety.html">Safety</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="careers.html">Careers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Careers Page -->
+    <main class="careers-page">
+        <!-- Hero Section -->
+        <section class="careers-hero">
+            <div class="container">
+                <h1>Join Our Team</h1>
+                <p>Be part of a leading pharmaceutical company that's making a difference in healthcare across West Africa. Discover exciting career opportunities and grow with us.</p>
+            </div>
+        </section>
+
+        <!-- Careers Content -->
+        <section class="careers-content">
+            <div class="container">
+                <div class="careers-grid">
+                    <div class="careers-info">
+                        <h2>Why Work at PharmaCorp?</h2>
+                        <p>At PharmaCorp, we believe our people are our greatest asset. We're committed to creating an inclusive, innovative environment where every team member can thrive and make a meaningful impact on global health.</p>
+                        
+                        <p>Join a company that values excellence, integrity, and continuous learning. Whether you're starting your career or looking to take the next step, we offer opportunities for growth and development in a dynamic industry.</p>
+                        
+                        <h3 style="color: #1e293b; margin: 2rem 0 1rem;">Employee Benefits</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check-circle"></i>Competitive salary and performance bonuses</li>
+                            <li><i class="fas fa-check-circle"></i>Comprehensive health insurance</li>
+                            <li><i class="fas fa-check-circle"></i>Professional development programs</li>
+                            <li><i class="fas fa-check-circle"></i>Flexible working arrangements</li>
+                            <li><i class="fas fa-check-circle"></i>Retirement savings plan</li>
+                            <li><i class="fas fa-check-circle"></i>Annual leave and wellness programs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="application-form">
+                        <h3>Apply Now</h3>
+                        <form id="careerForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="position">Position of Interest</label>
+                                    <select id="position" name="position">
+                                        <option value="">Select a position</option>
+                                        <option value="quality-analyst">Quality Control Analyst</option>
+                                        <option value="research-scientist">Research Scientist</option>
+                                        <option value="production-manager">Production Manager</option>
+                                        <option value="regulatory-affairs">Regulatory Affairs Specialist</option>
+                                        <option value="sales-representative">Sales Representative</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="experience">Years of Experience</label>
+                                    <select id="experience" name="experience">
+                                        <option value="">Select experience</option>
+                                        <option value="0-2">0-2 years</option>
+                                        <option value="3-5">3-5 years</option>
+                                        <option value="6-10">6-10 years</option>
+                                        <option value="10+">10+ years</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="coverLetter">Cover Letter / Why do you want to join PharmaCorp?</label>
+                                <textarea id="coverLetter" name="coverLetter" placeholder="Tell us about yourself and why you're interested in working with PharmaCorp..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cvUpload">Upload CV/Resume *</label>
+                                <input type="file" id="cvUpload" name="cvUpload" accept=".pdf,.doc,.docx" required style="padding: 0.75rem; border: 2px dashed #d1d5db; border-radius: 8px; background: #f9fafb;">
+                                <small style="color: #64748b; font-size: 0.875rem; margin-top: 0.5rem; display: block;">Accepted formats: PDF, DOC, DOCX (Max size: 5MB)</small>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Openings -->
+        <section class="job-openings">
+            <div class="container">
+                <h2>Current Job Openings</h2>
+                <div class="jobs-grid">
+                    <div class="job-card">
+                        <h3 class="job-title">Quality Control Analyst</h3>
+                        <div class="job-department">Quality Assurance Department</div>
+                        <p class="job-description">Join our quality control team to ensure all pharmaceutical products meet the highest standards of safety and efficacy.</p>
+                        <div class="job-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Bachelor's degree in Chemistry, Biology, or related field</li>
+                                <li>2+ years experience in pharmaceutical QC</li>
+                                <li>Knowledge of GMP and regulatory standards</li>
+                                <li>Strong analytical and problem-solving skills</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="scrollToApplication('quality-analyst')">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <h3 class="job-title">Research Scientist</h3>
+                        <div class="job-department">Research & Development</div>
+                        <p class="job-description">Lead innovative research projects to develop new pharmaceutical formulations and improve existing products.</p>
+                        <div class="job-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>PhD in Pharmaceutical Sciences or related field</li>
+                                <li>5+ years experience in drug development</li>
+                                <li>Experience with analytical methods and instrumentation</li>
+                                <li>Strong publication record preferred</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="scrollToApplication('research-scientist')">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <h3 class="job-title">Production Manager</h3>
+                        <div class="job-department">Manufacturing Operations</div>
+                        <p class="job-description">Oversee manufacturing operations to ensure efficient production while maintaining quality and safety standards.</p>
+                        <div class="job-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Bachelor's degree in Engineering or related field</li>
+                                <li>7+ years experience in pharmaceutical manufacturing</li>
+                                <li>Strong leadership and project management skills</li>
+                                <li>Knowledge of lean manufacturing principles</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="scrollToApplication('production-manager')">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <h3 class="job-title">Regulatory Affairs Specialist</h3>
+                        <div class="job-department">Regulatory Affairs</div>
+                        <p class="job-description">Ensure compliance with regulatory requirements and manage product registrations across multiple markets.</p>
+                        <div class="job-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Bachelor's degree in Life Sciences or related field</li>
+                                <li>3+ years experience in regulatory affairs</li>
+                                <li>Knowledge of FDA, EMA, and local regulations</li>
+                                <li>Excellent written and verbal communication skills</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="scrollToApplication('regulatory-affairs')">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <h3 class="job-title">Sales Representative</h3>
+                        <div class="job-department">Sales & Marketing</div>
+                        <p class="job-description">Build relationships with healthcare providers and promote our pharmaceutical products in assigned territories.</p>
+                        <div class="job-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Bachelor's degree in Business, Life Sciences, or related field</li>
+                                <li>2+ years experience in pharmaceutical sales</li>
+                                <li>Strong interpersonal and communication skills</li>
+                                <li>Valid driver's license and willingness to travel</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="scrollToApplication('sales-representative')">Apply Now</button>
+                    </div>
+
+                    <div class="job-card">
+                        <h3 class="job-title">Pharmacovigilance Officer</h3>
+                        <div class="job-department">Safety & Compliance</div>
+                        <p class="job-description">Monitor drug safety and manage adverse event reporting to ensure patient safety and regulatory compliance.</p>
+                        <div class="job-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Pharmacy or Medical degree</li>
+                                <li>3+ years experience in pharmacovigilance</li>
+                                <li>Knowledge of ICH guidelines and regulatory requirements</li>
+                                <li>Strong attention to detail and analytical skills</li>
+                            </ul>
+                        </div>
+                        <button class="apply-btn" onclick="scrollToApplication('other')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PharmaCorp</h3>
+                    <p>Leading pharmaceutical manufacturing and distribution company committed to improving global health.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prescription Drugs</a></li>
+                        <li><a href="#">OTC Medicines</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blogs.html">News</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="safety.html">Safety Information</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PharmaCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="careers.js"></script>
+</body>
+</html>

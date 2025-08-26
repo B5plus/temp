@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PharmaCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-page {
+            margin-top: 80px;
+        }
+        
+        .hero-about {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero-about h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-about p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .certifications {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .cert-card {
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .cert-card:hover {
+            border-color: #2563eb;
+            transform: translateY(-5px);
+        }
+        
+        .cert-card i {
+            font-size: 3rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: -3rem;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        
+        .timeline-marker {
+            width: 100px;
+            height: 100px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .timeline-content {
+            margin-left: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+        }
+        
+        .timeline-content h3 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .leadership {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .leader-card {
+            text-align: center;
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .leader-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .leader-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #64748b;
+        }
+        
+        .leader-card h3 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .leader-card .title {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .leader-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-pills"></i>
+                <span>PharmaCorp</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="safety.html">Safety</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="careers.html">Careers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Page -->
+    <main class="about-page">
+        <!-- Hero Section -->
+        <section class="hero-about">
+            <div class="container">
+                <h1>About PharmaCorp</h1>
+                <p>Leading the pharmaceutical industry with innovation, quality, and commitment to global health for over 25 years.</p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Mission</h2>
+                        <p>To improve global health by developing, manufacturing, and distributing high-quality pharmaceutical products that meet the highest international standards. We are committed to making healthcare accessible and affordable for everyone.</p>
+                        
+                        <h2 style="margin-top: 2rem;">Our Vision</h2>
+                        <p>To be the world's most trusted pharmaceutical company, recognized for our innovation, quality, and dedication to improving lives through advanced healthcare solutions.</p>
+                        
+                        <h2 style="margin-top: 2rem;">Our Values</h2>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: center; margin-bottom: 0.75rem; color: #64748b;">
+                                <i class="fas fa-heart" style="color: #ef4444; margin-right: 0.75rem; font-size: 1.1rem;"></i>
+                                Patient-first approach in everything we do
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 0.75rem; color: #64748b;">
+                                <i class="fas fa-shield-alt" style="color: #10b981; margin-right: 0.75rem; font-size: 1.1rem;"></i>
+                                Uncompromising commitment to quality and safety
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 0.75rem; color: #64748b;">
+                                <i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 0.75rem; font-size: 1.1rem;"></i>
+                                Continuous innovation and research excellence
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 0.75rem; color: #64748b;">
+                                <i class="fas fa-handshake" style="color: #2563eb; margin-right: 0.75rem; font-size: 1.1rem;"></i>
+                                Ethical business practices and transparency
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pharmaceutical Laboratory">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="certifications">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e293b;">Certifications & Compliance</h2>
+                <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Our commitment to quality is validated by international certifications and regulatory approvals.</p>
+                
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>FDA Approved</h3>
+                        <p>All facilities and products meet FDA regulations and standards.</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award"></i>
+                        <h3>ISO 9001:2015</h3>
+                        <p>Quality management system certification for consistent quality.</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>GMP Certified</h3>
+                        <p>Good Manufacturing Practice compliance across all facilities.</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>WHO Prequalified</h3>
+                        <p>World Health Organization prequalification for global distribution.</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Green Certified</h3>
+                        <p>Environmental sustainability and eco-friendly manufacturing.</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>HIPAA Compliant</h3>
+                        <p>Patient data protection and privacy compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Timeline -->
+        <section class="timeline">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #1e293b;">Our Journey</h2>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1999</div>
+                        <div class="timeline-content">
+                            <h3>Company Founded</h3>
+                            <p>PharmaCorp was established with a vision to make quality healthcare accessible to all. Started with a small team of dedicated professionals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2005</div>
+                        <div class="timeline-content">
+                            <h3>First FDA Approval</h3>
+                            <p>Received our first FDA approval for a breakthrough cardiovascular medication, marking our entry into the prescription drug market.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2010</div>
+                        <div class="timeline-content">
+                            <h3>International Expansion</h3>
+                            <p>Expanded operations globally with manufacturing facilities in Europe and Asia, serving over 50 countries worldwide.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2015</div>
+                        <div class="timeline-content">
+                            <h3>Research & Development Center</h3>
+                            <p>Opened state-of-the-art R&D facility focusing on innovative drug discovery and development of next-generation therapies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2020</div>
+                        <div class="timeline-content">
+                            <h3>Digital Transformation</h3>
+                            <p>Launched digital health initiatives and e-commerce platform, making pharmaceutical products more accessible through technology.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2024</div>
+                        <div class="timeline-content">
+                            <h3>Sustainability Leadership</h3>
+                            <p>Achieved carbon neutrality and launched green manufacturing initiatives, leading the industry in environmental responsibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team -->
+        <section class="leadership">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e293b;">Leadership Team</h2>
+                <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Meet the experienced professionals leading PharmaCorp's mission to improve global health.</p>
+                
+                <div class="leadership-grid">
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Dr. Sarah Johnson</h3>
+                        <div class="title">Chief Executive Officer</div>
+                        <p>25+ years in pharmaceutical industry with expertise in drug development and regulatory affairs. Former VP at major pharma companies.</p>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Dr. Michael Chen</h3>
+                        <div class="title">Chief Scientific Officer</div>
+                        <p>Leading researcher in molecular biology with 100+ published papers. Oversees all R&D activities and clinical trials.</p>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Lisa Rodriguez</h3>
+                        <div class="title">Chief Operating Officer</div>
+                        <p>Expert in pharmaceutical manufacturing and supply chain management. Ensures quality and efficiency across all operations.</p>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>David Thompson</h3>
+                        <div class="title">Chief Financial Officer</div>
+                        <p>Financial strategist with deep understanding of pharmaceutical markets. Drives sustainable growth and investment strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PharmaCorp</h3>
+                    <p>Leading pharmaceutical manufacturing and distribution company committed to improving global health.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prescription Drugs</a></li>
+                        <li><a href="#">OTC Medicines</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blogs.html">News</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PharmaCorp. All rights reserved.</p>
+            </div>
+        </div>
+      
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

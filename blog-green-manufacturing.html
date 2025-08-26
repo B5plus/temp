@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Manufacturing: Our Environmental Commitment - PharmaCorp Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .blog-post-page {
+            margin-top: 80px;
+        }
+        
+        .blog-post-header {
+            background: #f8fafc;
+            padding: 3rem 0;
+        }
+        
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-post-category {
+            background: #10b981;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .blog-post-date {
+            color: #64748b;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-post-date i {
+            margin-right: 0.5rem;
+        }
+        
+        .blog-post-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post-excerpt {
+            font-size: 1.2rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .blog-post-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .blog-post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .blog-post-content h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin: 2rem 0 1rem;
+        }
+        
+        .blog-post-content h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .blog-post-content p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .blog-post-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-post-content li {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-to-blogs {
+            display: inline-flex;
+            align-items: center;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+        
+        .back-to-blogs:hover {
+            color: #1d4ed8;
+        }
+        
+        .back-to-blogs i {
+            margin-right: 0.5rem;
+        }
+        
+        .sustainability-stat {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .sustainability-stat h4 {
+            color: #065f46;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .sustainability-stat h4 i {
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-post-title {
+                font-size: 2rem;
+            }
+            
+            .blog-post-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-pills"></i>
+                <span>PharmaCorp</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="safety.html">Safety</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="careers.html">Careers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Page -->
+    <main class="blog-post-page">
+        <!-- Blog Post Header -->
+        <section class="blog-post-header">
+            <div class="container">
+                <a href="blogs.html" class="back-to-blogs">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Blogs
+                </a>
+                
+                <div class="blog-post-meta">
+                    <span class="blog-post-category">Sustainability</span>
+                    <span class="blog-post-date">
+                        <i class="fas fa-calendar"></i>
+                        November 20, 2024
+                    </span>
+                </div>
+                
+                <h1 class="blog-post-title">Green Manufacturing: Our Environmental Commitment</h1>
+                <p class="blog-post-excerpt">How PharmaCorp is leading the way in sustainable pharmaceutical manufacturing practices, reducing environmental impact while maintaining the highest quality standards.</p>
+            </div>
+        </section>
+
+        <!-- Blog Post Content -->
+        <section style="padding: 2rem 0; background: white;">
+            <div class="container">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Green Manufacturing and Environmental Sustainability" class="blog-post-image">
+                
+                <div class="blog-post-content">
+                    <p>At PharmaCorp, we believe that protecting human health and protecting our planet go hand in hand. Our commitment to sustainable manufacturing practices demonstrates that environmental responsibility and pharmaceutical excellence are not just compatible—they're essential for our future.</p>
+
+                    <div class="sustainability-stat">
+                        <h4><i class="fas fa-leaf"></i>Our 2030 Commitment</h4>
+                        <p>PharmaCorp has committed to achieving carbon neutrality by 2030, with a 50% reduction in greenhouse gas emissions by 2027 compared to 2020 levels.</p>
+                    </div>
+
+                    <h2>Renewable Energy Transformation</h2>
+                    <p>Our journey toward sustainability begins with clean energy. We've made significant investments in renewable energy infrastructure across all our manufacturing facilities:</p>
+
+                    <h3>Solar Power Initiative</h3>
+                    <ul>
+                        <li><strong>Facility Coverage:</strong> 75% of our manufacturing facilities now use solar power</li>
+                        <li><strong>Energy Generation:</strong> 15 MW of solar capacity installed across our West African operations</li>
+                        <li><strong>Cost Savings:</strong> 40% reduction in energy costs since 2020</li>
+                        <li><strong>Future Plans:</strong> 100% renewable energy by 2026</li>
+                    </ul>
+
+                    <h3>Energy Efficiency Measures</h3>
+                    <ul>
+                        <li>LED lighting systems reducing energy consumption by 60%</li>
+                        <li>Smart HVAC systems with automated temperature control</li>
+                        <li>Energy recovery systems capturing waste heat</li>
+                        <li>Real-time energy monitoring and optimization</li>
+                    </ul>
+
+                    <h2>Water Conservation and Management</h2>
+                    <p>Water is a precious resource, especially in West Africa. Our comprehensive water management strategy focuses on conservation, recycling, and responsible usage:</p>
+
+                    <h3>Water Recycling Systems</h3>
+                    <ul>
+                        <li><strong>Closed-loop Systems:</strong> 80% of process water is recycled and reused</li>
+                        <li><strong>Rainwater Harvesting:</strong> Collection systems at all major facilities</li>
+                        <li><strong>Wastewater Treatment:</strong> Advanced treatment before discharge</li>
+                        <li><strong>Water Quality Monitoring:</strong> Continuous monitoring of all water sources</li>
+                    </ul>
+
+                    <div class="sustainability-stat">
+                        <h4><i class="fas fa-tint"></i>Water Conservation Achievement</h4>
+                        <p>We've reduced water consumption by 35% per unit of production since 2020, saving over 2 million liters annually.</p>
+                    </div>
+
+                    <h2>Waste Reduction and Circular Economy</h2>
+                    <p>Our approach to waste management follows the principles of reduce, reuse, and recycle:</p>
+
+                    <h3>Zero Waste to Landfill Initiative</h3>
+                    <ul>
+                        <li><strong>Waste Diversion:</strong> 95% of manufacturing waste diverted from landfills</li>
+                        <li><strong>Material Recovery:</strong> Advanced sorting and recovery systems</li>
+                        <li><strong>Composting Programs:</strong> Organic waste converted to fertilizer</li>
+                        <li><strong>Hazardous Waste:</strong> Specialized treatment and disposal protocols</li>
+                    </ul>
+
+                    <h3>Packaging Innovation</h3>
+                    <ul>
+                        <li>Biodegradable packaging materials for non-sterile products</li>
+                        <li>Reduced packaging sizes through design optimization</li>
+                        <li>Recyclable materials for all secondary packaging</li>
+                        <li>Digital documentation reducing paper usage by 70%</li>
+                    </ul>
+
+                    <h2>Green Chemistry and Process Innovation</h2>
+                    <p>We're revolutionizing our manufacturing processes through green chemistry principles:</p>
+
+                    <h3>Sustainable Manufacturing Processes</h3>
+                    <ul>
+                        <li><strong>Solvent Reduction:</strong> 50% reduction in organic solvent usage</li>
+                        <li><strong>Catalytic Processes:</strong> More efficient chemical reactions</li>
+                        <li><strong>Continuous Manufacturing:</strong> Reduced energy and material consumption</li>
+                        <li><strong>Process Intensification:</strong> Smaller equipment footprint</li>
+                    </ul>
+
+                    <h3>Raw Material Sourcing</h3>
+                    <ul>
+                        <li>Preference for suppliers with environmental certifications</li>
+                        <li>Local sourcing to reduce transportation emissions</li>
+                        <li>Sustainable packaging from suppliers</li>
+                        <li>Regular supplier sustainability audits</li>
+                    </ul>
+
+                    <h2>Carbon Footprint Reduction</h2>
+                    <p>Our comprehensive approach to reducing greenhouse gas emissions includes:</p>
+
+                    <h3>Direct Emissions (Scope 1)</h3>
+                    <ul>
+                        <li>Transition to electric and hybrid vehicle fleet</li>
+                        <li>Natural gas replacement with renewable alternatives</li>
+                        <li>Refrigerant management and leak prevention</li>
+                        <li>Process optimization to reduce energy consumption</li>
+                    </ul>
+
+                    <h3>Indirect Emissions (Scope 2 & 3)</h3>
+                    <ul>
+                        <li>Renewable energy procurement agreements</li>
+                        <li>Supplier engagement on sustainability practices</li>
+                        <li>Optimized logistics and transportation</li>
+                        <li>Employee commuting reduction programs</li>
+                    </ul>
+
+                    <div class="sustainability-stat">
+                        <h4><i class="fas fa-chart-line"></i>Carbon Reduction Progress</h4>
+                        <p>We've achieved a 30% reduction in carbon emissions since 2020, putting us ahead of schedule for our 2027 target.</p>
+                    </div>
+
+                    <h2>Biodiversity and Ecosystem Protection</h2>
+                    <p>Our commitment extends beyond our facilities to protecting local ecosystems:</p>
+
+                    <h3>Conservation Initiatives</h3>
+                    <ul>
+                        <li><strong>Reforestation Projects:</strong> 10,000 trees planted annually</li>
+                        <li><strong>Habitat Protection:</strong> Preservation of natural areas around facilities</li>
+                        <li><strong>Native Species:</strong> Landscaping with indigenous plants</li>
+                        <li><strong>Pollinator Gardens:</strong> Supporting local bee populations</li>
+                    </ul>
+
+                    <h2>Employee Engagement and Community Impact</h2>
+                    <p>Sustainability is a team effort that involves our entire workforce and local communities:</p>
+
+                    <h3>Green Team Initiatives</h3>
+                    <ul>
+                        <li>Employee-led sustainability committees at each facility</li>
+                        <li>Green commuting incentives and programs</li>
+                        <li>Environmental awareness training for all staff</li>
+                        <li>Sustainability suggestion programs with rewards</li>
+                    </ul>
+
+                    <h3>Community Partnerships</h3>
+                    <ul>
+                        <li>Environmental education programs in local schools</li>
+                        <li>Community clean-up and conservation projects</li>
+                        <li>Support for local environmental organizations</li>
+                        <li>Sharing of best practices with other manufacturers</li>
+                    </ul>
+
+                    <h2>Measuring and Reporting Progress</h2>
+                    <p>Transparency and accountability are crucial to our sustainability efforts:</p>
+
+                    <h3>Key Performance Indicators</h3>
+                    <ul>
+                        <li>Monthly tracking of energy, water, and waste metrics</li>
+                        <li>Annual third-party sustainability audits</li>
+                        <li>Public reporting of environmental performance</li>
+                        <li>Science-based targets aligned with climate goals</li>
+                    </ul>
+
+                    <h2>Future Innovations</h2>
+                    <p>We continue to invest in emerging technologies and practices:</p>
+                    <ul>
+                        <li><strong>Artificial Intelligence:</strong> AI-driven optimization of resource usage</li>
+                        <li><strong>Biotechnology:</strong> Bio-based manufacturing processes</li>
+                        <li><strong>Circular Design:</strong> Products designed for end-of-life recovery</li>
+                        <li><strong>Carbon Capture:</strong> Exploring carbon capture and utilization technologies</li>
+                    </ul>
+
+                    <h2>Our Commitment to the Future</h2>
+                    <p>PharmaCorp's environmental commitment is not just about compliance or corporate responsibility—it's about ensuring a healthy planet for future generations. By integrating sustainability into every aspect of our operations, we're proving that pharmaceutical manufacturing can be both environmentally responsible and economically viable.</p>
+
+                    <p>As we continue on this journey, we remain committed to innovation, transparency, and continuous improvement. Together with our employees, partners, and communities, we're building a more sustainable future for the pharmaceutical industry and the world.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PharmaCorp</h3>
+                    <p>Leading pharmaceutical manufacturing and distribution company committed to improving global health.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prescription Drugs</a></li>
+                        <li><a href="#">OTC Medicines</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="safety.html">Safety Information</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PharmaCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

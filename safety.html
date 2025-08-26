@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety & Compliance - PharmaCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .safety-page {
+            margin-top: 80px;
+        }
+        
+        .safety-hero {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .safety-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .safety-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            color: #92400e;
+        }
+        
+        .warning-box h3 {
+            color: #92400e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-box h3 i {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .safety-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #ef4444;
+        }
+        
+        .safety-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .safety-card h3 i {
+            margin-right: 0.75rem;
+            color: #ef4444;
+            font-size: 1.5rem;
+        }
+        
+        .safety-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .safety-card li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .safety-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+        }
+        
+        .compliance-section {
+            background: #f8fafc;
+            padding: 4rem 0;
+        }
+        
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .compliance-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .compliance-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .compliance-card i {
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+        
+        .compliance-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .compliance-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .emergency-contact {
+            background: #ef4444;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .emergency-contact h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .emergency-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .emergency-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .emergency-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .emergency-card h3 i {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .emergency-card p {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .reporting-section {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .reporting-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #dc2626;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-pills"></i>
+                <span>PharmaCorp</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="safety.html">Safety</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="careers.html">Careers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Safety Page -->
+    <main class="safety-page">
+        <!-- Hero Section -->
+        <section class="safety-hero">
+            <div class="container">
+                <h1>Safety & Compliance</h1>
+                <p>Your safety is our top priority. Learn about proper medication use, safety guidelines, and regulatory compliance.</p>
+            </div>
+        </section>
+
+        <!-- Important Safety Information -->
+        <section style="padding: 4rem 0; background: white;">
+            <div class="container">
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i>Important Safety Notice</h3>
+                    <p><strong>Always consult with a healthcare professional before taking any medication.</strong> This website is for informational purposes only and does not replace professional medical advice. Never stop or change your medication without consulting your doctor.</p>
+                </div>
+
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #1e293b;">Medication Safety Guidelines</h2>
+
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <h3><i class="fas fa-prescription-bottle"></i>Prescription Medications</h3>
+                        <ul>
+                            <li>Always take medications exactly as prescribed by your healthcare provider</li>
+                            <li>Never share prescription medications with others</li>
+                            <li>Complete the full course of antibiotics even if you feel better</li>
+                            <li>Store medications in their original containers</li>
+                            <li>Check expiration dates before taking any medication</li>
+                            <li>Report any side effects to your healthcare provider immediately</li>
+                        </ul>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3><i class="fas fa-pills"></i>Over-the-Counter Medications</h3>
+                        <ul>
+                            <li>Read and follow all label instructions carefully</li>
+                            <li>Do not exceed recommended dosages</li>
+                            <li>Check for drug interactions with other medications</li>
+                            <li>Consult a pharmacist if you have questions</li>
+                            <li>Be aware of active ingredients to avoid duplication</li>
+                            <li>Stop use and consult a doctor if symptoms persist</li>
+                        </ul>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3><i class="fas fa-thermometer"></i>Storage Guidelines</h3>
+                        <ul>
+                            <li>Store medications at room temperature unless specified otherwise</li>
+                            <li>Keep medications in a cool, dry place away from sunlight</li>
+                            <li>Avoid storing medications in bathrooms or cars</li>
+                            <li>Keep medications out of reach of children and pets</li>
+                            <li>Some medications require refrigeration - follow instructions</li>
+                            <li>Dispose of expired medications properly</li>
+                        </ul>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3><i class="fas fa-baby"></i>Special Populations</h3>
+                        <ul>
+                            <li>Pregnant or breastfeeding women should consult doctors before taking any medication</li>
+                            <li>Children require special dosing - never give adult medications to children</li>
+                            <li>Elderly patients may need adjusted doses due to slower metabolism</li>
+                            <li>Patients with kidney or liver disease need special considerations</li>
+                            <li>Always inform healthcare providers of all medications being taken</li>
+                            <li>Consider drug allergies and previous adverse reactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regulatory Compliance -->
+        <section class="compliance-section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e293b;">Regulatory Compliance</h2>
+                <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">PharmaCorp adheres to the highest regulatory standards to ensure product safety and efficacy.</p>
+
+                <div class="compliance-grid">
+                    <div class="compliance-card">
+                        <i class="fas fa-gavel"></i>
+                        <h3>FDA Regulations</h3>
+                        <p>All products comply with FDA regulations for safety, efficacy, and quality. Regular inspections ensure continued compliance.</p>
+                    </div>
+
+                    <div class="compliance-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Good Manufacturing Practice</h3>
+                        <p>Our facilities follow GMP guidelines to ensure consistent quality and safety in all manufacturing processes.</p>
+                    </div>
+
+                    <div class="compliance-card">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Quality Control</h3>
+                        <p>Rigorous testing at every stage of production ensures products meet specifications and safety standards.</p>
+                    </div>
+
+                    <div class="compliance-card">
+                        <i class="fas fa-file-medical"></i>
+                        <h3>Clinical Trials</h3>
+                        <p>All new medications undergo extensive clinical trials to demonstrate safety and efficacy before approval.</p>
+                    </div>
+
+                    <div class="compliance-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Supply Chain Integrity</h3>
+                        <p>Secure supply chain with temperature monitoring and tracking to maintain product integrity during distribution.</p>
+                    </div>
+
+                    <div class="compliance-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Pharmacovigilance</h3>
+                        <p>Continuous monitoring of drug safety and adverse events to ensure ongoing product safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="emergency-contact">
+            <div class="container">
+                <h2>Emergency Contact Information</h2>
+                <p>If you experience a medical emergency or severe adverse reaction, seek immediate medical attention.</p>
+
+                <div class="emergency-info">
+                    <div class="emergency-card">
+                        <h3><i class="fas fa-phone"></i>24/7 Safety Hotline</h3>
+                        <p>1-800-PHARMA-SAFE</p>
+                        <p>(1-800-742-7627)</p>
+                    </div>
+
+                    <div class="emergency-card">
+                        <h3><i class="fas fa-envelope"></i>Safety Email</h3>
+                        <p>safety@pharmacorp.com</p>
+                        <p>Response within 24 hours</p>
+                    </div>
+
+                    <div class="emergency-card">
+                        <h3><i class="fas fa-exclamation-circle"></i>Poison Control</h3>
+                        <p>1-800-222-1222</p>
+                        <p>National Poison Control Center</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adverse Event Reporting -->
+        <section class="reporting-section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e293b;">Report Adverse Events</h2>
+                <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Help us maintain medication safety by reporting any adverse events or side effects.</p>
+
+                <div class="reporting-form">
+                    <form id="adverseEventForm">
+                        <div class="form-group">
+                            <label for="patientAge">Patient Age</label>
+                            <input type="number" id="patientAge" name="patientAge" min="0" max="120">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patientGender">Patient Gender</label>
+                            <select id="patientGender" name="patientGender">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="medicationName">Medication Name</label>
+                            <input type="text" id="medicationName" name="medicationName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lotNumber">Lot Number (if available)</label>
+                            <input type="text" id="lotNumber" name="lotNumber">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adverseEvent">Description of Adverse Event</label>
+                            <textarea id="adverseEvent" name="adverseEvent" required placeholder="Please describe the adverse event, including symptoms, timing, and severity..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reporterContact">Contact Information (optional)</label>
+                            <input type="email" id="reporterContact" name="reporterContact" placeholder="email@example.com">
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit Report</button>
+                    </form>
+                </div>
+
+                <p style="text-align: center; color: #64748b; margin-top: 2rem; font-size: 0.9rem;">
+                    <i class="fas fa-lock"></i> All reports are confidential and help improve medication safety for everyone.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PharmaCorp</h3>
+                    <p>Leading pharmaceutical manufacturing and distribution company committed to improving global health.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prescription Drugs</a></li>
+                        <li><a href="#">OTC Medicines</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blogs.html">News</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="safety.html">Safety Information</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PharmaCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Handle adverse event form submission
+        document.getElementById('adverseEventForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show confirmation message
+            alert('Thank you for your report. We take all adverse events seriously and will investigate promptly. If this is a medical emergency, please seek immediate medical attention.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

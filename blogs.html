@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - PharmaCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .blogs-page {
+            margin-top: 80px;
+        }
+        
+        .blogs-hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%),
+                        url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .blogs-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blogs-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        .blog-date {
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-date i {
+            margin-right: 0.5rem;
+        }
+        
+        .blog-category {
+            background: #2563eb;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .blog-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .blog-read-more:hover {
+            color: #1d4ed8;
+        }
+        
+        .blog-read-more i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .blog-read-more:hover i {
+            transform: translateX(3px);
+        }
+        
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .featured-post .blog-image {
+            height: 300px;
+        }
+        
+        .featured-post .blog-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-post .blog-title {
+            font-size: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .blogs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-pills"></i>
+                <span>PharmaCorp</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="safety.html">Safety</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="careers.html">Careers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search blogs..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blogs Page -->
+    <main class="blogs-page">
+        <!-- Hero Section -->
+        <section class="blogs-hero">
+            <div class="container">
+                <h1>PharmaCorp Blog</h1>
+                <p>Stay informed with the latest pharmaceutical industry insights, health tips, and company updates from our experts.</p>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section style="padding: 4rem 0; background: #f8fafc;">
+            <div class="container">
+                <div class="blogs-grid">
+                    <!-- Featured Post -->
+                    <article class="blog-card featured-post">
+                        <img src="images/doc in lab.png" alt="Future of Pharmaceutical Manufacturing" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    December 15, 2024
+                                </span>
+                                <span class="blog-category">Industry Insights</span>
+                            </div>
+                            <h2 class="blog-title">The Future of Pharmaceutical Manufacturing in West Africa</h2>
+                            <p class="blog-excerpt">Exploring the technological advancements and regulatory changes shaping the pharmaceutical landscape in West Africa. From AI-driven drug discovery to sustainable manufacturing practices, discover what's next for the industry.</p>
+                            <a href="blog-future-pharma.html" class="blog-read-more">
+                                Read Full Article
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Regular Blog Posts -->
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Quality Control" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    December 10, 2024
+                                </span>
+                                <span class="blog-category">Quality Assurance</span>
+                            </div>
+                            <h3 class="blog-title">Ensuring Quality: Our Advanced Testing Protocols</h3>
+                            <p class="blog-excerpt">Learn about PharmaCorp's comprehensive quality control measures that ensure every product meets international standards.</p>
+                            <a href="blog-quality-control.html" class="blog-read-more">
+                                Read More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Medication Safety" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    December 5, 2024
+                                </span>
+                                <span class="blog-category">Health Tips</span>
+                            </div>
+                            <h3 class="blog-title">Medication Safety: Best Practices for Patients</h3>
+                            <p class="blog-excerpt">Essential guidelines for safe medication use, storage, and understanding prescription labels.</p>
+                            <a href="blog-medication-safety.html" class="blog-read-more">
+                                Read More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Regulatory Updates" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    November 28, 2024
+                                </span>
+                                <span class="blog-category">Regulatory</span>
+                            </div>
+                            <h3 class="blog-title">New FDA Guidelines: What You Need to Know</h3>
+                            <p class="blog-excerpt">Understanding the latest FDA regulations and how they impact pharmaceutical manufacturing and distribution.</p>
+                            <a href="blog-fda-guidelines.html" class="blog-read-more">
+                                Read More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Green Manufacturing and Sustainability" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    November 20, 2024
+                                </span>
+                                <span class="blog-category">Sustainability</span>
+                            </div>
+                            <h3 class="blog-title">Green Manufacturing: Our Environmental Commitment</h3>
+                            <p class="blog-excerpt">How PharmaCorp is leading the way in sustainable pharmaceutical manufacturing practices.</p>
+                            <a href="blog-green-manufacturing.html" class="blog-read-more">
+                                Read More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Innovation" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    November 15, 2024
+                                </span>
+                                <span class="blog-category">Innovation</span>
+                            </div>
+                            <h3 class="blog-title">Digital Health: The Role of Technology in Modern Medicine</h3>
+                            <p class="blog-excerpt">Exploring how digital technologies are revolutionizing healthcare delivery and patient outcomes.</p>
+                            <a href="blog-digital-health.html" class="blog-read-more">
+                                Read More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PharmaCorp</h3>
+                    <p>Leading pharmaceutical manufacturing and distribution company committed to improving global health.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/pharmacorp" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prescription Drugs</a></li>
+                        <li><a href="#">OTC Medicines</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="safety.html">Safety Information</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PharmaCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

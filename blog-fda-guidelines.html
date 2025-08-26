@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New FDA Guidelines: What You Need to Know - PharmaCorp Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .blog-post-page {
+            margin-top: 80px;
+        }
+        
+        .blog-post-header {
+            background: #f8fafc;
+            padding: 3rem 0;
+        }
+        
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-post-category {
+            background: #ef4444;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .blog-post-date {
+            color: #64748b;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-post-date i {
+            margin-right: 0.5rem;
+        }
+        
+        .blog-post-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post-excerpt {
+            font-size: 1.2rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .blog-post-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .blog-post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .blog-post-content h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin: 2rem 0 1rem;
+        }
+        
+        .blog-post-content h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .blog-post-content p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .blog-post-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-post-content li {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-to-blogs {
+            display: inline-flex;
+            align-items: center;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+        
+        .back-to-blogs:hover {
+            color: #1d4ed8;
+        }
+        
+        .back-to-blogs i {
+            margin-right: 0.5rem;
+        }
+        
+        .regulatory-highlight {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .regulatory-highlight h4 {
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .regulatory-highlight h4 i {
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-post-title {
+                font-size: 2rem;
+            }
+            
+            .blog-post-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-pills"></i>
+                <span>PharmaCorp</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="safety.html">Safety</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Page -->
+    <main class="blog-post-page">
+        <!-- Blog Post Header -->
+        <section class="blog-post-header">
+            <div class="container">
+                <a href="blogs.html" class="back-to-blogs">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Blogs
+                </a>
+                
+                <div class="blog-post-meta">
+                    <span class="blog-post-category">Regulatory</span>
+                    <span class="blog-post-date">
+                        <i class="fas fa-calendar"></i>
+                        November 28, 2024
+                    </span>
+                </div>
+                
+                <h1 class="blog-post-title">New FDA Guidelines: What You Need to Know</h1>
+                <p class="blog-post-excerpt">Understanding the latest FDA regulations and how they impact pharmaceutical manufacturing and distribution, ensuring continued compliance and patient safety.</p>
+            </div>
+        </section>
+
+        <!-- Blog Post Content -->
+        <section style="padding: 2rem 0; background: white;">
+            <div class="container">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="FDA Regulatory Guidelines" class="blog-post-image">
+                
+                <div class="blog-post-content">
+                    <p>The FDA continues to evolve its regulatory framework to address emerging challenges in pharmaceutical manufacturing and distribution. Recent updates introduce significant changes that affect how pharmaceutical companies operate, ensuring enhanced patient safety and product quality.</p>
+
+                    <div class="regulatory-highlight">
+                        <h4><i class="fas fa-gavel"></i>Compliance Deadline</h4>
+                        <p>All pharmaceutical manufacturers must implement these new guidelines by June 1, 2025. PharmaCorp is already ahead of schedule in implementing these changes.</p>
+                    </div>
+
+                    <h2>Key Changes in Manufacturing Standards</h2>
+                    <p>The updated guidelines introduce stricter requirements for pharmaceutical manufacturing processes:</p>
+
+                    <h3>Enhanced Quality Control Measures</h3>
+                    <ul>
+                        <li><strong>Real-time Release Testing:</strong> Implementation of continuous monitoring systems</li>
+                        <li><strong>Advanced Data Integrity:</strong> Stricter requirements for electronic records and signatures</li>
+                        <li><strong>Risk-based Approach:</strong> Enhanced focus on critical quality attributes</li>
+                        <li><strong>Supply Chain Verification:</strong> Increased scrutiny of raw material suppliers</li>
+                    </ul>
+
+                    <h3>Technology Integration Requirements</h3>
+                    <ul>
+                        <li>Mandatory use of serialization for all prescription medications</li>
+                        <li>Implementation of blockchain technology for supply chain tracking</li>
+                        <li>Advanced analytics for predictive quality control</li>
+                        <li>Automated documentation systems to reduce human error</li>
+                    </ul>
+
+                    <h2>Updated Good Manufacturing Practices (cGMP)</h2>
+                    <p>The revised cGMP guidelines emphasize a more holistic approach to quality management:</p>
+
+                    <h3>Process Validation Updates</h3>
+                    <ul>
+                        <li><strong>Lifecycle Approach:</strong> Continuous validation throughout product lifecycle</li>
+                        <li><strong>Statistical Process Control:</strong> Enhanced use of statistical methods</li>
+                        <li><strong>Design Space Concepts:</strong> Greater flexibility within validated parameters</li>
+                        <li><strong>Knowledge Management:</strong> Systematic capture and application of process knowledge</li>
+                    </ul>
+
+                    <h3>Facility Design and Maintenance</h3>
+                    <ul>
+                        <li>Updated HVAC system requirements for contamination control</li>
+                        <li>Enhanced cleaning validation protocols</li>
+                        <li>Improved personnel flow and material handling procedures</li>
+                        <li>Advanced environmental monitoring systems</li>
+                    </ul>
+
+                    <h2>Digital Transformation Requirements</h2>
+                    <p>The FDA is pushing for greater digitalization across the pharmaceutical industry:</p>
+
+                    <h3>Electronic Submissions</h3>
+                    <ul>
+                        <li>Mandatory electronic submission for all regulatory filings</li>
+                        <li>Standardized data formats for improved review efficiency</li>
+                        <li>Real-time access to manufacturing data for inspectors</li>
+                        <li>Enhanced cybersecurity requirements for digital systems</li>
+                    </ul>
+
+                    <h3>Data Integrity Standards</h3>
+                    <ul>
+                        <li><strong>ALCOA+ Principles:</strong> Attributable, Legible, Contemporaneous, Original, Accurate, Complete, Consistent, Enduring, Available</li>
+                        <li><strong>Audit Trails:</strong> Comprehensive tracking of all data modifications</li>
+                        <li><strong>Access Controls:</strong> Role-based permissions for data access</li>
+                        <li><strong>Backup and Recovery:</strong> Robust data protection measures</li>
+                    </ul>
+
+                    <h2>Supply Chain Security Enhancements</h2>
+                    <p>New requirements address growing concerns about supply chain integrity:</p>
+
+                    <h3>Supplier Qualification</h3>
+                    <ul>
+                        <li>Enhanced due diligence for all suppliers</li>
+                        <li>Regular audits of critical suppliers</li>
+                        <li>Risk assessment based on supplier location and capabilities</li>
+                        <li>Contingency planning for supply disruptions</li>
+                    </ul>
+
+                    <h3>Track and Trace Requirements</h3>
+                    <ul>
+                        <li>End-to-end visibility of pharmaceutical products</li>
+                        <li>Real-time monitoring of storage conditions</li>
+                        <li>Rapid response capabilities for product recalls</li>
+                        <li>Integration with global tracking systems</li>
+                    </ul>
+
+                    <div class="regulatory-highlight">
+                        <h4><i class="fas fa-shield-alt"></i>Patient Safety Focus</h4>
+                        <p>All new guidelines prioritize patient safety through enhanced quality systems, improved transparency, and faster response to safety signals.</p>
+                    </div>
+
+                    <h2>Pharmacovigilance Updates</h2>
+                    <p>Enhanced requirements for post-market surveillance and safety monitoring:</p>
+
+                    <h3>Adverse Event Reporting</h3>
+                    <ul>
+                        <li>Shortened reporting timelines for serious adverse events</li>
+                        <li>Enhanced signal detection methodologies</li>
+                        <li>Improved international coordination for safety data</li>
+                        <li>Patient-reported outcome integration</li>
+                    </ul>
+
+                    <h3>Risk Evaluation and Mitigation Strategies (REMS)</h3>
+                    <ul>
+                        <li>Expanded use of REMS for high-risk medications</li>
+                        <li>Enhanced monitoring of REMS effectiveness</li>
+                        <li>Improved healthcare provider education requirements</li>
+                        <li>Patient engagement in risk mitigation</li>
+                    </ul>
+
+                    <h2>PharmaCorp's Compliance Strategy</h2>
+                    <p>PharmaCorp has proactively implemented comprehensive measures to exceed these new requirements:</p>
+
+                    <h3>Implementation Timeline</h3>
+                    <ul>
+                        <li><strong>Phase 1 (Completed):</strong> Technology infrastructure upgrades</li>
+                        <li><strong>Phase 2 (In Progress):</strong> Process validation updates</li>
+                        <li><strong>Phase 3 (Q1 2025):</strong> Staff training and certification</li>
+                        <li><strong>Phase 4 (Q2 2025):</strong> Full compliance verification</li>
+                    </ul>
+
+                    <h3>Investment in Compliance</h3>
+                    <ul>
+                        <li>$50 million investment in new quality control equipment</li>
+                        <li>Advanced training programs for all manufacturing staff</li>
+                        <li>Partnership with leading technology providers</li>
+                        <li>Continuous improvement culture implementation</li>
+                    </ul>
+
+                    <h2>Impact on Patients and Healthcare Providers</h2>
+                    <p>These regulatory changes will benefit patients and healthcare providers through:</p>
+                    <ul>
+                        <li>Enhanced medication safety and efficacy</li>
+                        <li>Improved supply chain reliability</li>
+                        <li>Faster identification and resolution of safety issues</li>
+                        <li>Greater transparency in pharmaceutical manufacturing</li>
+                        <li>Reduced risk of counterfeit medications</li>
+                    </ul>
+
+                    <h2>Looking Ahead</h2>
+                    <p>The pharmaceutical industry continues to evolve, and regulatory frameworks must adapt to new challenges and opportunities. PharmaCorp remains committed to not just meeting but exceeding these standards, ensuring that our patients receive the highest quality medications available.</p>
+
+                    <p>We will continue to monitor regulatory developments and proactively implement changes to maintain our position as a leader in pharmaceutical manufacturing and distribution. Our commitment to quality, safety, and compliance remains unwavering as we navigate this evolving regulatory landscape.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PharmaCorp</h3>
+                    <p>Leading pharmaceutical manufacturing and distribution company committed to improving global health.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Prescription Drugs</a></li>
+                        <li><a href="#">OTC Medicines</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="safety.html">Safety Information</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PharmaCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
